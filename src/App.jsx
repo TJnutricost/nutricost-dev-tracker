@@ -11,8 +11,8 @@ import {
 /* ================================================================== */
 /* DEPLOY CONFIG — fill these in to make the tracker shared (see guide)*/
 /* ================================================================== */
-const SUPABASE_URL = "https://skgsqmfkmoevqvkotfxh.supabase.co";       // e.g. "https://abcdef.supabase.co"
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNrZ3NxbWZrbW9ldnF2a290ZnhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIyMzc4MzQsImV4cCI6MjA5NzgxMzgzNH0.TpV82dkfvh-3v2OlcGJMVrK4atc_z_V9bWlXXVpe_hQ";  // public anon key — safe to ship in client code
+const SUPABASE_URL = "";       // e.g. "https://abcdef.supabase.co"
+const SUPABASE_ANON_KEY = "";  // public anon key — safe to ship in client code
 const ROW_ID = "main";
 /* ================================================================== */
 
@@ -383,8 +383,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900" style={{ fontFamily: "system-ui, sans-serif" }}>
+      <style>{`.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}`}</style>
       <div className="text-white" style={{ background: BLUE }}>
-        <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between gap-3">
+        <div className="w-full px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
           <div>
             <div className="text-xs font-bold uppercase tracking-wider opacity-80">Nutricost · Web Dev</div>
             <h1 className="text-lg font-bold leading-tight">Dev Completion Tracker</h1>
@@ -402,7 +403,7 @@ export default function App() {
             )}
           </div>
         </div>
-        <div className="mx-auto max-w-7xl px-2 flex gap-1 overflow-x-auto">
+        <div className="w-full px-2 sm:px-4 flex gap-1 overflow-x-auto no-scrollbar">
           {TABS.map(([k, label, Icon]) => (
             <button key={k} onClick={() => setTab(k)}
               className={"flex items-center gap-1.5 whitespace-nowrap px-3 py-2.5 text-sm font-semibold border-b-2 " + (tab === k ? "border-white text-white" : "border-transparent text-white/70 hover:text-white")}>
@@ -412,7 +413,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 py-5">
+      <div className="w-full px-4 sm:px-6 py-5">
         {projects.length === 0 && (
           <Card className="p-6 text-center text-gray-500">No projects yet. {READONLY ? "" : <>Add one in <b>Projects</b>, then log events.</>}</Card>
         )}

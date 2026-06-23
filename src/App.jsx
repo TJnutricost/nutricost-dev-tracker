@@ -11,8 +11,8 @@ import {
 /* ================================================================== */
 /* DEPLOY CONFIG — fill these in to make the tracker shared (see guide)*/
 /* ================================================================== */
-const SUPABASE_URL = "";       // e.g. "https://abcdef.supabase.co"
-const SUPABASE_ANON_KEY = "";  // public anon key — safe to ship in client code
+const SUPABASE_URL = "https://skgsqmfkmoevqvkotfxh.supabase.co";       // e.g. "https://abcdef.supabase.co"
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNrZ3NxbWZrbW9ldnF2a290ZnhoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIyMzc4MzQsImV4cCI6MjA5NzgxMzgzNH0.TpV82dkfvh-3v2OlcGJMVrK4atc_z_V9bWlXXVpe_hQ";  // public anon key — safe to ship in client code
 const ROW_ID = "main";
 /* ================================================================== */
 

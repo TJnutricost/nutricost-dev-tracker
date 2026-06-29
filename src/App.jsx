@@ -582,9 +582,10 @@ function Timeline({ segs, projects }) {
               <span>{p.name}</span>
               <span className="text-xs font-normal opacity-80">{ps.length} steps · active {n1(totalA)}d · wait {n1(totalW)}d · {fmtD(ps[0].start)} → {fmtD(ps[ps.length - 1].end)}</span>
             </div>
-            {/* Desktop Gantt */}
-            <div className="hidden sm:block overflow-x-auto no-scrollbar p-3">
+            {/* Gantt chart — horizontally scrollable on all screen sizes */}
+            <div className="overflow-x-auto no-scrollbar p-3">
               <div style={{ minWidth: nDays * 48 }}>
+                <div style={grid} className="mb-0.5">{days.map((d, i) => <div key={i} className="text-center text-[10px] text-gray-400">{"SMTWTFS"[d.getDay()]}</div>)}</div>
                 <div style={grid} className="mb-1.5">{days.map((d, i) => <div key={i} className="text-center text-[11px] font-semibold text-gray-500">{(d.getMonth() + 1) + "/" + d.getDate()}</div>)}</div>
                 {Array.from({ length: lanes }, (_, lane) => (
                   <div key={lane} style={grid} className="mb-0.5">
@@ -601,24 +602,6 @@ function Timeline({ segs, projects }) {
                   </div>
                 ))}
               </div>
-            </div>
-            {/* Mobile vertical list with notes */}
-            <div className="sm:hidden divide-y divide-gray-100">
-              {ps.map((s, i) => (
-                <div key={i} className="flex gap-2.5 p-3">
-                  <div className="w-1.5 shrink-0 rounded" style={{ background: s.color }} />
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="text-sm font-bold" style={{ color: s.color }}>{s.displayStatus}</span>
-                      <span className="text-xs text-gray-500 shrink-0">{n1(s.durationDays)}d</span>
-                    </div>
-                    <div className="text-xs text-gray-500">{fmtDT(s.start)} → {fmtDT(s.end)}</div>
-                    {s.taskLabel && <div className="text-sm mt-0.5">{s.taskLabel}</div>}
-                    {s.notes && <div className="text-xs text-gray-600 mt-0.5">{s.notes}</div>}
-                    {s.enteredBy && <div className="text-[11px] text-gray-400 mt-0.5">by {s.enteredBy}</div>}
-                  </div>
-                </div>
-              ))}
             </div>
           </Card>
         );

@@ -1,0 +1,62 @@
+{
+  "eslint.config.js": {
+    "mtime": 1782743548.3174298,
+    "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1782743548.3180683,
+    "ast_hash": "c221f60cca42398d1d08e57220592af9",
+    "semantic_hash": ""
+  },
+  "src/App.jsx": {
+    "mtime": 1782744825.8521397,
+    "ast_hash": "d9071f741e95bdd2aa09aaf4a691f2b6",
+    "semantic_hash": ""
+  },
+  "src/main.jsx": {
+    "mtime": 1782743548.3193758,
+    "ast_hash": "970be8de0eb8701e482734cfa220ac9e",
+    "semantic_hash": ""
+  },
+  "vite.config.js": {
+    "mtime": 1782743548.3194644,
+    "ast_hash": "88439104b3c207f17d33ef3160e3b080",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1782743548.3173456,
+    "ast_hash": "ba5cf26a9158001a979ef1cf99360b9b",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1782743548.3175185,
+    "ast_hash": "d6b8648abc3944511f2acd33b36e3830",
+    "semantic_hash": ""
+  },
+  "public/favicon.svg": {
+    "mtime": 1782743548.318259,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "public/icons.svg": {
+    "mtime": 1782743548.318407,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "src/assets/hero.png": {
+    "mtime": 1782743548.3189085,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "src/assets/react.svg": {
+    "mtime": 1782743548.3190615,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "src/assets/vite.svg": {
+    "mtime": 1782743548.3192282,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  }
+}
